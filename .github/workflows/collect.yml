@@ -3,15 +3,19 @@ name: Collect
 # Refreshes the data file from its declared sources and regenerates the control
 # room. The adapters read GitHub through `gh`, authenticated with the job token,
 # so a component's repo must be readable by this repo's Actions token.
+#
+# Deterministic: REST reads mapped by fixed rules. No model is involved.
+# Scheduled runs are best-effort on GitHub's side and often land a few minutes
+# late; the schedule is the floor, not a promise.
 
 on:
   schedule:
-    - cron: "17 5 * * *"      # daily, 05:17 UTC
+    - cron: "*/5 * * * *"     # every 5 minutes (GitHub's minimum)
   workflow_dispatch:
 
 permissions:
   contents: write
-  actions: read
+  actions: write              # to dispatch the Pages publish when something changed
   deployments: read
   security-events: read
 
@@ -61,6 +65,10 @@ jobs:
           if git diff --cached --quiet; then
             echo "nothing changed"
           else
-            git commit -m "chore: collect $(date -u +%Y-%m-%d) and regenerate control room"
+            git commit -m "chore: collect $(date -u +%Y-%m-%dT%H:%MZ) and regenerate control room"
             git push
+            # a push made with the job token raises no push event, so publish explicitly
+            gh workflow run pages.yml --ref main
           fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -5,7 +5,8 @@ name: Publish control room
 # keeps a single generated file and the root URL still resolves.
 #
 # CI regenerates the room with the job token, and pushes made with that token
-# do not raise push events — so this also runs after the workflows that do it.
+# do not raise push events — so this also runs after Intent change completes,
+# and Collect dispatches it explicitly when it committed something.
 
 on:
   push:
@@ -13,7 +14,7 @@ on:
     paths:
       - "site/**"
   workflow_run:
-    workflows: ["Intent change", "Collect"]
+    workflows: ["Intent change"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
