@@ -49,19 +49,19 @@ jobs:
       - name: Contract still satisfied
         run: |
           python3 .harness/plugins/fleet-control/skills/fleet-scaffold/references/scaffold.py \
-            intent/software-factory.intent.json data data/software-factory.data.json check | tee contract.txt
+            intent/lights-out.intent.json data data/lights-out.data.json check | tee contract.txt
           grep -q ", 0 incomplete" contract.txt
 
       - name: Regenerate the control room
         run: |
           python3 .harness/plugins/fleet-control/skills/fleet-surface/references/build.py \
-            intent/software-factory.intent.json data/software-factory.data.json site/control-room.html
+            intent/lights-out.intent.json data/lights-out.data.json site/control-room.html
 
       - name: Commit
         run: |
           git config user.name  "fleet-harness"
           git config user.email "fleet-harness@users.noreply.github.com"
-          git add data/software-factory.data.json site/control-room.html
+          git add data/lights-out.data.json site/control-room.html
           if git diff --cached --quiet; then
             echo "nothing changed"
           else

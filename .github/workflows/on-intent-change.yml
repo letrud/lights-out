@@ -28,7 +28,7 @@ jobs:
   intent:
     uses: letrud/harness/.github/workflows/on-intent-change.yml@v1
     with:
-      fleet: software-factory
+      fleet: lights-out
       harness_repo: letrud/harness
       harness_ref: v1
       autofix: false   # the agent path is rebuild.yml; this workflow validates, audits and renders

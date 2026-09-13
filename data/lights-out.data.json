@@ -1,6 +1,81 @@
 {
   "items": [
     {
+      "name": "lights-out",
+      "path": "letrud/lights-out",
+      "lang": "Python",
+      "squad": "Platform",
+      "tier": 2,
+      "owner": "letrud",
+      "pipeline": {
+        "build": "on-intent-change.yml",
+        "test": "on-intent-change.yml",
+        "deploy": "pages.yml"
+      },
+      "envMap": {
+        "github-pages": "prod"
+      },
+      "stages": {
+        "build": "warn",
+        "test": "warn",
+        "scan": "idle",
+        "sign": "idle",
+        "release": "idle",
+        "deploy": "ok"
+      },
+      "auto": 50,
+      "deploys": 8,
+      "freq": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8
+      ],
+      "lastDeploy": "45m ago",
+      "lead": "0m",
+      "leadM": 0,
+      "cfr": 0.0,
+      "mttr": null,
+      "env": {
+        "dev": null,
+        "test": null,
+        "stage": null,
+        "prod": "7bd6063"
+      },
+      "envState": {
+        "dev": "none",
+        "test": "none",
+        "stage": "none",
+        "prod": "ok"
+      },
+      "vuln": {
+        "c": 0,
+        "h": 0,
+        "m": 0
+      },
+      "cov": null,
+      "covTrend": null,
+      "gate": null,
+      "debt": null,
+      "rating": null,
+      "signed": false,
+      "sbom": false,
+      "slsa": 0,
+      "outdated": null,
+      "runbook": false,
+      "stageLinks": {
+        "build": "https://github.com/letrud/software-factory/actions/runs/34745502234",
+        "test": "https://github.com/letrud/software-factory/actions/runs/34745502234",
+        "deploy": "https://github.com/letrud/software-factory/actions/runs/34766950671"
+      }
+    },
+    {
       "name": "ops",
       "path": "letrud/ops",
       "lang": "Python",
@@ -211,81 +286,6 @@
         "build": "https://github.com/letrud/psd2-cli/actions/runs/34757470937",
         "test": "https://github.com/letrud/psd2-cli/actions/runs/34757470937",
         "release": "https://github.com/letrud/psd2-cli/actions/runs/34754333510"
-      }
-    },
-    {
-      "name": "software-factory",
-      "path": "letrud/software-factory",
-      "lang": "Python",
-      "squad": "Platform",
-      "tier": 2,
-      "owner": "letrud",
-      "pipeline": {
-        "build": "on-intent-change.yml",
-        "test": "on-intent-change.yml",
-        "deploy": "pages.yml"
-      },
-      "envMap": {
-        "github-pages": "prod"
-      },
-      "stages": {
-        "build": "warn",
-        "test": "warn",
-        "scan": "idle",
-        "sign": "idle",
-        "release": "idle",
-        "deploy": "ok"
-      },
-      "auto": 50,
-      "deploys": 8,
-      "freq": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        8
-      ],
-      "lastDeploy": "45m ago",
-      "lead": "0m",
-      "leadM": 0,
-      "cfr": 0.0,
-      "mttr": null,
-      "env": {
-        "dev": null,
-        "test": null,
-        "stage": null,
-        "prod": "7bd6063"
-      },
-      "envState": {
-        "dev": "none",
-        "test": "none",
-        "stage": "none",
-        "prod": "ok"
-      },
-      "vuln": {
-        "c": 0,
-        "h": 0,
-        "m": 0
-      },
-      "cov": null,
-      "covTrend": null,
-      "gate": null,
-      "debt": null,
-      "rating": null,
-      "signed": false,
-      "sbom": false,
-      "slsa": 0,
-      "outdated": null,
-      "runbook": false,
-      "stageLinks": {
-        "build": "https://github.com/letrud/software-factory/actions/runs/34745502234",
-        "test": "https://github.com/letrud/software-factory/actions/runs/34745502234",
-        "deploy": "https://github.com/letrud/software-factory/actions/runs/34766950671"
       }
     }
   ]

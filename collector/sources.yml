@@ -2,7 +2,7 @@
 # `collect.py --check` fails if the intent requires a field this file does not declare.
 # status: live = a real source · owned = a human owns this value by design
 #         todo = carried by hand only because no source exists yet
-fleet: software-factory
+fleet: lights-out
 
 adapters:
   github_actions:

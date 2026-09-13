@@ -1,6 +1,6 @@
 HARNESS ?= ../harness
 B := $(HARNESS)/plugins/fleet-control/skills
-FLEET := software-factory
+FLEET := lights-out
 
 .PHONY: check audit room collect skeleton
 check:  ## schema, contract and source coverage
