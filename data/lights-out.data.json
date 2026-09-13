@@ -16,15 +16,15 @@
         "github-pages": "prod"
       },
       "stages": {
-        "build": "warn",
-        "test": "warn",
+        "build": "ok",
+        "test": "ok",
         "scan": "idle",
         "sign": "idle",
         "release": "idle",
         "deploy": "ok"
       },
       "auto": 50,
-      "deploys": 8,
+      "deploys": 13,
       "freq": [
         0,
         0,
@@ -35,9 +35,9 @@
         0,
         0,
         0,
-        8
+        13
       ],
-      "lastDeploy": "45m ago",
+      "lastDeploy": "36m ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "7bd6063"
+        "prod": "dd1200b"
       },
       "envState": {
         "dev": "none",
@@ -70,9 +70,9 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "build": "https://github.com/letrud/software-factory/actions/runs/34745502234",
-        "test": "https://github.com/letrud/software-factory/actions/runs/34745502234",
-        "deploy": "https://github.com/letrud/software-factory/actions/runs/34766950671"
+        "build": "https://github.com/letrud/lights-out/actions/runs/34774268505",
+        "test": "https://github.com/letrud/lights-out/actions/runs/34774268505",
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/34774284880"
       }
     },
     {
