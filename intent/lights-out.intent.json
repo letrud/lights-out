@@ -1,7 +1,7 @@
 {
   "spec": 1,
-  "title": "Foundry Control Room",
-  "eyebrow": "Software factory · Fleet",
+  "title": "Lights-out",
+  "eyebrow": "Lights-out · Fleet",
   "brandIcon": "factory",
   "liveLabel": "Control plane live",
   "syncLabel": "synced",
@@ -499,7 +499,7 @@
       "id": "overview",
       "type": "cards",
       "icon": "grid",
-      "label": "Components",
+      "label": "Factory Floor",
       "title": "Component overview",
       "crumb": "Software factory · Fleet"
     },
