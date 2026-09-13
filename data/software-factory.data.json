@@ -237,7 +237,7 @@
         "deploy": "ok"
       },
       "auto": 50,
-      "deploys": 7,
+      "deploys": 8,
       "freq": [
         0,
         0,
@@ -248,9 +248,9 @@
         0,
         0,
         0,
-        7
+        8
       ],
-      "lastDeploy": "3h ago",
+      "lastDeploy": "45m ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -259,7 +259,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "6de03d4"
+        "prod": "7bd6063"
       },
       "envState": {
         "dev": "none",
@@ -285,7 +285,7 @@
       "stageLinks": {
         "build": "https://github.com/letrud/software-factory/actions/runs/34745502234",
         "test": "https://github.com/letrud/software-factory/actions/runs/34745502234",
-        "deploy": "https://github.com/letrud/software-factory/actions/runs/34758057466"
+        "deploy": "https://github.com/letrud/software-factory/actions/runs/34766950671"
       }
     }
   ]
