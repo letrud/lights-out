@@ -147,12 +147,12 @@
         "github-pages": "prod"
       },
       "stages": {
-        "build": "warn",
-        "test": "warn",
+        "build": "run",
+        "test": "run",
         "scan": "idle",
         "sign": "idle",
         "release": "idle",
-        "deploy": "ok"
+        "deploy": "run"
       },
       "auto": 50,
       "deploys": 1,
@@ -168,7 +168,7 @@
         0,
         1
       ],
-      "lastDeploy": "10m ago",
+      "lastDeploy": "13m ago",
       "lead": "1m",
       "leadM": 1,
       "cfr": 0.0,
@@ -177,13 +177,13 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "fd1784a"
+        "prod": "de8650b"
       },
       "envState": {
         "dev": "none",
         "test": "none",
         "stage": "none",
-        "prod": "ok"
+        "prod": "run"
       },
       "vuln": {
         "c": 0,
