@@ -1,6 +1,6 @@
 # Intent
 
-This folder specifies `software-factory`. An implementation conforming to
+This folder specifies `lights-out`. An implementation conforming to
 `INTENT.md`, `SPEC.md` and `EVAL.md` is a correct implementation, in any
 language. Source code is an output of this specification, not a peer of it.
 
@@ -12,7 +12,7 @@ The delivery fleet: every repository in the estate, held to one declared
 standard, with the facts about each gathered from the systems that own them and
 rendered as one control room.
 
-Two files under `intent/` are the contract. `software-factory.intent.json` — the
+Two files under `intent/` are the contract. `lights-out.intent.json` — the
 *fleet intent* — declares what a component is, the dimensions it is judged on,
 the states those take, the standard it is held to, and the views. This document
 and its companions declare how the facts that fill it are gathered, kept honest,
@@ -20,7 +20,7 @@ and published.
 
 ## 2. The fleet intent is the standard
 
-**2.1** `software-factory.intent.json` is read, validated, audited and rendered by
+**2.1** `lights-out.intent.json` is read, validated, audited and rendered by
 the harness's `fleet-control` engine (`letrud/harness`, pinned). An
 implementation MUST use that engine for schema validation, the contract check,
 the audit and the render, and MUST NOT fork or reimplement it.

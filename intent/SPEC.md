@@ -6,14 +6,14 @@ Normative. RFC 2119 keywords.
 
 ```
 intent/
-  software-factory.intent.json   the fleet intent — the standard; schema in the harness
+  lights-out.intent.json   the fleet intent — the standard; schema in the harness
   components/<name>.json         one component's owned wiring — people write these
   INTENT.md  SPEC.md  EVAL.md    this specification
 collector/
   sources.yml                    where every required field comes from
   <implementation>               the adapters
 data/
-  software-factory.data.json     generated — the component records
+  lights-out.data.json     generated — the component records
 site/
   control-room.html              generated — the room
 ```
@@ -26,7 +26,7 @@ at `HARNESS`.
 ## 2. `collector/sources.yml`
 
 ```yaml
-fleet: software-factory
+fleet: lights-out
 adapters:
   <adapter>: { note: <what system, read how> }
 fields:
@@ -47,7 +47,7 @@ not named is dead code.
 A component is declared by people in `intent/components/<name>.json`, one file
 per component, carrying exactly the owned fields below and nothing else. Adding a
 component to the fleet is a change under `intent/` with no code in it. The
-collector produces `data/software-factory.data.json` from these files: one
+collector produces `data/lights-out.data.json` from these files: one
 record per component, the owned fields copied through, every other required
 field filled by its adapter or left at its day-one value.
 
@@ -122,7 +122,7 @@ regeneration MUST be dispatched explicitly or chained by `workflow_run`.
 ## 7. Publication
 
 `site/control-room.html` is published at
-`https://letrud.github.io/software-factory/`, with the file copied to
+`https://letrud.github.io/lights-out/`, with the file copied to
 `index.html` in the published artifact only, so the repository holds one
 generated file and the root URL resolves.
 
