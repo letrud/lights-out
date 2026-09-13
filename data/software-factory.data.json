@@ -74,11 +74,15 @@
     {
       "name": "psd2-cli",
       "path": "letrud/psd2-cli",
-      "lang": null,
+      "lang": "Go",
       "squad": "Payments",
       "tier": 1,
       "owner": "letrud",
-      "pipeline": {},
+      "pipeline": {
+        "build": "build.yml",
+        "test": "build.yml",
+        "release": "release.yml"
+      },
       "envMap": {},
       "stages": {
         "build": "idle",
@@ -160,7 +164,7 @@
         "deploy": "ok"
       },
       "auto": 50,
-      "deploys": 3,
+      "deploys": 4,
       "freq": [
         0,
         0,
@@ -171,9 +175,9 @@
         0,
         0,
         0,
-        3
+        4
       ],
-      "lastDeploy": "6m ago",
+      "lastDeploy": "17m ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -182,7 +186,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "6e2fd9a"
+        "prod": "b823d16"
       },
       "envState": {
         "dev": "none",
@@ -206,9 +210,9 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "build": "https://github.com/letrud/software-factory/actions/runs/34744997420",
-        "test": "https://github.com/letrud/software-factory/actions/runs/34744997420",
-        "deploy": "https://github.com/letrud/software-factory/actions/runs/34745220156"
+        "build": "https://github.com/letrud/software-factory/actions/runs/34745502234",
+        "test": "https://github.com/letrud/software-factory/actions/runs/34745502234",
+        "deploy": "https://github.com/letrud/software-factory/actions/runs/34745513808"
       }
     }
   ]
