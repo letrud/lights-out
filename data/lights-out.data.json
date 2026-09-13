@@ -24,7 +24,7 @@
         "deploy": "ok"
       },
       "auto": 50,
-      "deploys": 13,
+      "deploys": 15,
       "freq": [
         0,
         0,
@@ -35,9 +35,9 @@
         0,
         0,
         0,
-        13
+        15
       ],
-      "lastDeploy": "36m ago",
+      "lastDeploy": "1h ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "dd1200b"
+        "prod": "c7163f8"
       },
       "envState": {
         "dev": "none",
@@ -70,9 +70,9 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "build": "https://github.com/letrud/lights-out/actions/runs/34774268505",
-        "test": "https://github.com/letrud/lights-out/actions/runs/34774268505",
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/34774284880"
+        "build": "https://github.com/letrud/lights-out/actions/runs/34778828048",
+        "test": "https://github.com/letrud/lights-out/actions/runs/34778828048",
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/34778844902"
       }
     },
     {
