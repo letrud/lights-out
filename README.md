@@ -2,6 +2,8 @@
 
 Software factory. Every repo in the delivery estate, scored on automation, quality, environments and supply chain.
 
+The estate today: `software-factory`, `ops`, and `psd2-cli` (coming — carried at its day-one state until the repo exists). Facts come from GitHub — workflow runs, Deployments, Dependabot — refreshed daily by the `Collect` workflow; what has no source yet is shown as unknown, not guessed.
+
 The intent is the contract; everything else in this repo exists to satisfy it. See CLAUDE.md for the working rules.
 
 ## Control room
@@ -17,7 +19,7 @@ The live control room, published from `site/control-room.html` on every change t
 | `intent/software-factory.intent.json` | The contract — unit, dimensions, states, severity, the standard, the views |
 | `data/software-factory.data.json` | The components |
 | `collector/sources.yml` | Where every field the intent requires actually comes from |
-| `collector/collect.py` | The adapters that fetch those values |
+| `collector/collect.py` | The adapters that fetch those values — GitHub Actions, Deployments and Dependabot, through `gh` |
 | `site/control-room.html` | Generated. Never hand-edited. Published to [letrud.github.io/software-factory](https://letrud.github.io/software-factory/) |
 
 ## Commands
@@ -26,11 +28,15 @@ The live control room, published from `site/control-room.html` on every change t
 make check     # schema, contract, source coverage
 make audit     # ranked gaps against the declared standard
 make room      # regenerate the control room
-make collect   # run the adapters and refresh the data
+make collect   # run the adapters and refresh the data (needs `gh auth status` to pass)
 make skeleton ID=new-thing CLASS=1   # honest day-one record
 ```
 
 Needs the harness at `../harness`, or `HARNESS=/path/to/harness`.
+
+## Adding a component
+
+Add a record to `data/software-factory.data.json` — `make skeleton ID=name CLASS=tier` gives the honest starting point — then set `path`, `pipeline` and `envMap` (see CLAUDE.md) and run `make collect`. Keep the file sorted by `name`.
 
 ## When you change the intent
 

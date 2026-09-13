@@ -1,0 +1,66 @@
+name: Collect
+
+# Refreshes the data file from its declared sources and regenerates the control
+# room. The adapters read GitHub through `gh`, authenticated with the job token,
+# so a component's repo must be readable by this repo's Actions token.
+
+on:
+  schedule:
+    - cron: "17 5 * * *"      # daily, 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+  deployments: read
+  security-events: read
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check out the harness
+        uses: actions/checkout@v4
+        with:
+          repository: letrud/harness
+          ref: v1
+          path: .harness
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install jsonschema pyyaml
+
+      - name: Collect
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 collector/collect.py
+
+      - name: Contract still satisfied
+        run: |
+          python3 .harness/plugins/fleet-control/skills/fleet-scaffold/references/scaffold.py \
+            intent/software-factory.intent.json data data/software-factory.data.json check | tee contract.txt
+          grep -q ", 0 incomplete" contract.txt
+
+      - name: Regenerate the control room
+        run: |
+          python3 .harness/plugins/fleet-control/skills/fleet-surface/references/build.py \
+            intent/software-factory.intent.json data/software-factory.data.json site/control-room.html
+
+      - name: Commit
+        run: |
+          git config user.name  "fleet-harness"
+          git config user.email "fleet-harness@users.noreply.github.com"
+          git add data/software-factory.data.json site/control-room.html
+          if git diff --cached --quiet; then
+            echo "nothing changed"
+          else
+            git commit -m "chore: collect $(date -u +%Y-%m-%d) and regenerate control room"
+            git push
+          fi

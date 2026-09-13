@@ -3,12 +3,19 @@ name: Publish control room
 # Publishes site/ to GitHub Pages whenever the generated control room changes.
 # control-room.html is copied to index.html in the artifact only, so the repo
 # keeps a single generated file and the root URL still resolves.
+#
+# CI regenerates the room with the job token, and pushes made with that token
+# do not raise push events — so this also runs after the workflows that do it.
 
 on:
   push:
     branches: [main]
     paths:
       - "site/**"
+  workflow_run:
+    workflows: ["Intent change", "Collect"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -22,6 +29,7 @@ concurrency:
 
 jobs:
   publish:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

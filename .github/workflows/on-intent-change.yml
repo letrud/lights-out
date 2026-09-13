@@ -34,3 +34,4 @@ jobs:
       autofix: ${{ github.event_name != 'workflow_dispatch' || inputs.autofix }}
     secrets:
       anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+      claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
