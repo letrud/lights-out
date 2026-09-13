@@ -147,15 +147,15 @@
         "github-pages": "prod"
       },
       "stages": {
-        "build": "run",
-        "test": "run",
+        "build": "warn",
+        "test": "warn",
         "scan": "idle",
         "sign": "idle",
         "release": "idle",
-        "deploy": "run"
+        "deploy": "ok"
       },
       "auto": 50,
-      "deploys": 1,
+      "deploys": 2,
       "freq": [
         0,
         0,
@@ -166,24 +166,24 @@
         0,
         0,
         0,
-        1
+        2
       ],
-      "lastDeploy": "13m ago",
-      "lead": "1m",
-      "leadM": 1,
+      "lastDeploy": "4m ago",
+      "lead": "0m",
+      "leadM": 0,
       "cfr": 0.0,
       "mttr": null,
       "env": {
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "de8650b"
+        "prod": "2c3c7ea"
       },
       "envState": {
         "dev": "none",
         "test": "none",
         "stage": "none",
-        "prod": "run"
+        "prod": "ok"
       },
       "vuln": {
         "c": 0,
