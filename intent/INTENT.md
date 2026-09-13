@@ -6,7 +6,7 @@ language. Source code is an output of this specification, not a peer of it.
 
 Where a statement here conflicts with existing code, the code is wrong.
 
-## 1. What software-factory is
+## 1. What lights-out is
 
 The delivery fleet: every repository in the estate, held to one declared
 standard, with the facts about each gathered from the systems that own them and
