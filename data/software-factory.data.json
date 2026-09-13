@@ -65,7 +65,11 @@
       "sbom": false,
       "slsa": 0,
       "outdated": null,
-      "runbook": false
+      "runbook": false,
+      "stageLinks": {
+        "build": "https://github.com/letrud/ops/actions/runs/34744999098",
+        "test": "https://github.com/letrud/ops/actions/runs/34744999098"
+      }
     },
     {
       "name": "psd2-cli",
@@ -129,7 +133,8 @@
       "sbom": false,
       "slsa": 0,
       "outdated": null,
-      "runbook": false
+      "runbook": false,
+      "stageLinks": {}
     },
     {
       "name": "software-factory",
@@ -155,7 +160,7 @@
         "deploy": "ok"
       },
       "auto": 50,
-      "deploys": 2,
+      "deploys": 3,
       "freq": [
         0,
         0,
@@ -166,9 +171,9 @@
         0,
         0,
         0,
-        2
+        3
       ],
-      "lastDeploy": "4m ago",
+      "lastDeploy": "6m ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -177,7 +182,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "2c3c7ea"
+        "prod": "6e2fd9a"
       },
       "envState": {
         "dev": "none",
@@ -199,7 +204,12 @@
       "sbom": false,
       "slsa": 0,
       "outdated": null,
-      "runbook": false
+      "runbook": false,
+      "stageLinks": {
+        "build": "https://github.com/letrud/software-factory/actions/runs/34744997420",
+        "test": "https://github.com/letrud/software-factory/actions/runs/34744997420",
+        "deploy": "https://github.com/letrud/software-factory/actions/runs/34745220156"
+      }
     }
   ]
 }

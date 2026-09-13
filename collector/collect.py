@@ -230,6 +230,13 @@ def adapter_github_actions(record, field, spec):
     pipeline = record.get("pipeline") or {}
     if field == "stages":
         return {s: stage_state(runs_of(repo, pipeline.get(s))) for s in STAGES}
+    if field == "stageLinks":             # the run that put each stage in its current state
+        links = {}
+        for s in STAGES:
+            runs = runs_of(repo, pipeline.get(s))
+            if runs and runs[0].get("html_url"):
+                links[s] = runs[0]["html_url"]
+        return links
     if field == "auto":
         stages = {s: stage_state(runs_of(repo, pipeline.get(s))) for s in STAGES}
         return round(100 * sum(1 for v in stages.values() if v != "idle") / len(STAGES))

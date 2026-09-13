@@ -40,6 +40,10 @@ fields:
   stages:
     adapter: github_actions
     status: live
+  stageLinks:
+    adapter: github_actions
+    status: live
+    note: URL of the latest run behind each configured stage, so a chip opens the thing it describes
   auto:
     adapter: github_actions
     status: live

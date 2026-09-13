@@ -114,7 +114,8 @@
           "warn": "flaky / degraded",
           "crit": "failing — blocks promotion",
           "idle": "not configured"
-        }
+        },
+        "links": "stageLinks"
       },
       "details": [
         {
