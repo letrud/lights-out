@@ -1,0 +1,14 @@
+{
+  "name": "psd2-web",
+  "path": "letrud/psd2-web",
+  "lang": null,
+  "squad": "Payments",
+  "tier": 2,
+  "owner": "letrud",
+  "pipeline": {
+    "build": "build.yml",
+    "test": "build.yml",
+    "release": "release.yml"
+  },
+  "envMap": {}
+}
