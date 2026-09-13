@@ -15,6 +15,7 @@ on:
     branches: [main]
     paths:
       - "intent/**"
+  pull_request:          # the harness's intent-boundary guard
   workflow_dispatch:
     inputs:
       before:
@@ -42,4 +43,5 @@ jobs:
     with:
       before: ${{ inputs.before }}
       after: ${{ inputs.after }}
+      derived_paths: data/,site/   # written by the automation on main, never by a change
     secrets: inherit
