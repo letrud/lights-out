@@ -4,7 +4,7 @@ Software factory. Every repo in the delivery estate, scored on automation, quali
 
 The estate today: `software-factory`, `ops`, and `psd2-cli` (coming — carried at its day-one state until the repo exists). Facts come from GitHub — workflow runs, Deployments, Dependabot — refreshed every few minutes by the `Collect` workflow; what has no source yet is shown as unknown, not guessed.
 
-The intent is the contract; everything else in this repo exists to satisfy it. See CLAUDE.md for the working rules.
+The intent is the contract; everything else in this repo exists to satisfy it. `intent/software-factory.intent.json` says what a component is judged on; `intent/INTENT.md`, `SPEC.md` and `EVAL.md` say how the facts are gathered, kept honest and published; `intent/components/` declares the components. On every change under `intent/` the harness dispatches an agent to bring the implementation into line — see `letrud/harness/WAY-OF-WORKING.md`.
 
 ## Control room
 

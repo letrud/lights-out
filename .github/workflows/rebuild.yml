@@ -1,0 +1,45 @@
+name: Rebuild from intent
+
+# intent/ is the specification; the implementation is written from it. On every
+# change to intent/ the harness dispatches Claude Code to bring the implementation
+# into line and open a pull request. This file knows nothing about the repository
+# and can be copied to any repo built the same way, unchanged.
+#
+# Needs CLAUDE_CODE_OAUTH_TOKEN (from `claude setup-token`) or ANTHROPIC_API_KEY
+# as a repository secret, and Settings → Actions → General → "Allow GitHub Actions
+# to create and approve pull requests". Without a credential it records the
+# change and stops.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "intent/**"
+  workflow_dispatch:
+    inputs:
+      before:
+        description: "Commit before the intent change (set by the push hand-off; empty = full reconcile)"
+        type: string
+        default: ""
+      after:
+        description: "Commit after the intent change"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+  actions: write
+
+concurrency:
+  group: rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    uses: letrud/harness/.github/workflows/rebuild-from-intent.yml@v1
+    with:
+      before: ${{ inputs.before }}
+      after: ${{ inputs.after }}
+    secrets: inherit
