@@ -1,0 +1,16 @@
+{
+  "name": "software-factory",
+  "path": "letrud/software-factory",
+  "lang": "Python",
+  "squad": "Platform",
+  "tier": 2,
+  "owner": "letrud",
+  "pipeline": {
+    "build": "on-intent-change.yml",
+    "test": "on-intent-change.yml",
+    "deploy": "pages.yml"
+  },
+  "envMap": {
+    "github-pages": "prod"
+  }
+}

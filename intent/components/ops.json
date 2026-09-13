@@ -1,0 +1,13 @@
+{
+  "name": "ops",
+  "path": "letrud/ops",
+  "lang": "Python",
+  "squad": "Platform",
+  "tier": 3,
+  "owner": "letrud",
+  "pipeline": {
+    "build": "on-intent-change.yml",
+    "test": "on-intent-change.yml"
+  },
+  "envMap": {}
+}
