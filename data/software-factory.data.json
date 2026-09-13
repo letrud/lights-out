@@ -72,9 +72,9 @@
       }
     },
     {
-      "name": "psd2-cli",
-      "path": "letrud/psd2-cli",
-      "lang": "Go",
+      "name": "psd2-api",
+      "path": "letrud/psd2-api",
+      "lang": null,
       "squad": "Payments",
       "tier": 1,
       "owner": "letrud",
@@ -141,6 +141,79 @@
       "stageLinks": {}
     },
     {
+      "name": "psd2-cli",
+      "path": "letrud/psd2-cli",
+      "lang": "Go",
+      "squad": "Payments",
+      "tier": 1,
+      "owner": "letrud",
+      "pipeline": {
+        "build": "build.yml",
+        "test": "build.yml",
+        "release": "release.yml"
+      },
+      "envMap": {},
+      "stages": {
+        "build": "ok",
+        "test": "ok",
+        "scan": "idle",
+        "sign": "idle",
+        "release": "ok",
+        "deploy": "idle"
+      },
+      "auto": 50,
+      "deploys": 0,
+      "freq": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lastDeploy": "never",
+      "lead": null,
+      "leadM": null,
+      "cfr": null,
+      "mttr": null,
+      "env": {
+        "dev": null,
+        "test": null,
+        "stage": null,
+        "prod": null
+      },
+      "envState": {
+        "dev": "none",
+        "test": "none",
+        "stage": "none",
+        "prod": "none"
+      },
+      "vuln": {
+        "c": 0,
+        "h": 0,
+        "m": 0
+      },
+      "cov": null,
+      "covTrend": null,
+      "gate": null,
+      "debt": null,
+      "rating": null,
+      "signed": false,
+      "sbom": false,
+      "slsa": 0,
+      "outdated": null,
+      "runbook": false,
+      "stageLinks": {
+        "build": "https://github.com/letrud/psd2-cli/actions/runs/34757470937",
+        "test": "https://github.com/letrud/psd2-cli/actions/runs/34757470937",
+        "release": "https://github.com/letrud/psd2-cli/actions/runs/34754333510"
+      }
+    },
+    {
       "name": "software-factory",
       "path": "letrud/software-factory",
       "lang": "Python",
@@ -164,7 +237,7 @@
         "deploy": "ok"
       },
       "auto": 50,
-      "deploys": 6,
+      "deploys": 7,
       "freq": [
         0,
         0,
@@ -175,7 +248,7 @@
         0,
         0,
         0,
-        6
+        7
       ],
       "lastDeploy": "3h ago",
       "lead": "0m",
@@ -186,7 +259,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "9587800"
+        "prod": "6de03d4"
       },
       "envState": {
         "dev": "none",
@@ -212,7 +285,7 @@
       "stageLinks": {
         "build": "https://github.com/letrud/software-factory/actions/runs/34745502234",
         "test": "https://github.com/letrud/software-factory/actions/runs/34745502234",
-        "deploy": "https://github.com/letrud/software-factory/actions/runs/34748902226"
+        "deploy": "https://github.com/letrud/software-factory/actions/runs/34758057466"
       }
     }
   ]
