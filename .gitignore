@@ -1,0 +1,6 @@
+__pycache__/
+.harness/
+*.pyc
+contract.txt
+sources.txt
+audit.txt

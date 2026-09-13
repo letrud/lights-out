@@ -1,0 +1,36 @@
+name: Intent change
+
+# The intent is the contract for this fleet. When it changes, the harness
+# re-validates it, checks whether this repo's local implementation still
+# satisfies it, and dispatches Claude to close the gap if it does not.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "intent/**"
+  pull_request:
+    paths:
+      - "intent/**"
+      - "collector/**"
+  workflow_dispatch:
+    inputs:
+      autofix:
+        description: "Let Claude update the local implementation"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  intent:
+    uses: letrud/harness/.github/workflows/on-intent-change.yml@v1
+    with:
+      fleet: software-factory
+      harness_repo: letrud/harness
+      harness_ref: v1
+      autofix: ${{ github.event_name != 'workflow_dispatch' || inputs.autofix }}
+    secrets:
+      anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}

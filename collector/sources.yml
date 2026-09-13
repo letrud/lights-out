@@ -1,0 +1,103 @@
+# Where every field the intent requires actually comes from.
+# `collect.py --check` fails if the intent requires a field this file does not declare.
+# status: live = a real source · owned = a human owns this value by design
+#         todo = carried by hand only because no source exists yet
+fleet: software-factory
+
+adapters:
+  github_actions:
+    note: workflow runs on the default branch
+  sonarqube:
+    note: project measures API
+  trivy:
+    note: scan results published with each build
+  argocd:
+    note: application health and synced revision per cluster
+  manual:
+    note: maintained by hand in the data file
+
+fields:
+  auto:
+    adapter: github_actions
+    status: live
+  cfr:
+    adapter: github_actions
+    status: live
+  cov:
+    adapter: sonarqube
+    status: live
+  covTrend:
+    adapter: sonarqube
+    status: live
+  debt:
+    adapter: sonarqube
+    status: live
+  deploys:
+    adapter: github_actions
+    status: live
+  env:
+    adapter: argocd
+    status: live
+  envState:
+    adapter: argocd
+    status: live
+  freq:
+    adapter: github_actions
+    status: live
+  gate:
+    adapter: sonarqube
+    status: live
+  lang:
+    adapter: manual
+    status: owned
+  lastDeploy:
+    adapter: github_actions
+    status: live
+  lead:
+    adapter: github_actions
+    status: live
+  leadM:
+    adapter: github_actions
+    status: live
+  mttr:
+    adapter: github_actions
+    status: live
+  name:
+    adapter: manual
+    status: owned
+  outdated:
+    adapter: trivy
+    status: live
+  owner:
+    adapter: manual
+    status: owned
+  path:
+    adapter: manual
+    status: owned
+  rating:
+    adapter: sonarqube
+    status: live
+  runbook:
+    adapter: manual
+    status: todo
+  sbom:
+    adapter: trivy
+    status: live
+  signed:
+    adapter: trivy
+    status: live
+  slsa:
+    adapter: trivy
+    status: live
+  squad:
+    adapter: manual
+    status: owned
+  stages:
+    adapter: github_actions
+    status: live
+  tier:
+    adapter: manual
+    status: owned
+  vuln:
+    adapter: trivy
+    status: live

@@ -1,0 +1,31 @@
+# software-factory
+
+Software factory. Every repo in the delivery estate, scored on automation, quality, environments and supply chain.
+
+The intent is the contract; everything else in this repo exists to satisfy it. See CLAUDE.md for the working rules.
+
+## Layout
+
+| Path | What it is |
+| --- | --- |
+| `intent/software-factory.intent.json` | The contract — unit, dimensions, states, severity, the standard, the views |
+| `data/software-factory.data.json` | The components |
+| `collector/sources.yml` | Where every field the intent requires actually comes from |
+| `collector/collect.py` | The adapters that fetch those values |
+| `site/control-room.html` | Generated. Never hand-edited |
+
+## Commands
+
+```bash
+make check     # schema, contract, source coverage
+make audit     # ranked gaps against the declared standard
+make room      # regenerate the control room
+make collect   # run the adapters and refresh the data
+make skeleton ID=new-thing CLASS=1   # honest day-one record
+```
+
+Needs the harness at `../harness`, or `HARNESS=/path/to/harness`.
+
+## When you change the intent
+
+Raising the standard is meant to produce audit gaps — that is the point, and the audit is advisory here. What is not advisory is the contract: if the intent requires a field the data or the collector cannot supply, CI fails and opens a PR that closes the gap. Review that PR for whether the *source* is real; a field carried as `manual / todo` is an honest gap, an invented adapter is not.
