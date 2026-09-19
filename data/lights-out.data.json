@@ -29,13 +29,13 @@
         0,
         0,
         0,
-        0,
-        13,
+        12,
         6,
         6,
         7,
         6,
-        7
+        8,
+        0
       ],
       "lastDeploy": "1h ago",
       "lead": "0m",
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "274b6af"
+        "prod": "a9ee33f"
       },
       "envState": {
         "dev": "none",
@@ -72,7 +72,7 @@
       "stageLinks": {
         "build": "https://github.com/letrud/lights-out/actions/runs/34778828048",
         "test": "https://github.com/letrud/lights-out/actions/runs/34778828048",
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/35398854856"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/35406547318"
       }
     },
     {
