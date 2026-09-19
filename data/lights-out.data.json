@@ -24,18 +24,18 @@
         "deploy": "ok"
       },
       "auto": 50,
-      "deploys": 45,
+      "deploys": 44,
       "freq": [
         0,
         0,
         0,
-        11,
+        9,
         6,
         6,
         7,
         6,
         8,
-        1
+        2
       ],
       "lastDeploy": "4h ago",
       "lead": "0m",
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "85dc403"
+        "prod": "f3a9386"
       },
       "envState": {
         "dev": "none",
@@ -72,7 +72,7 @@
       "stageLinks": {
         "build": "https://github.com/letrud/lights-out/actions/runs/34778828048",
         "test": "https://github.com/letrud/lights-out/actions/runs/34778828048",
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/35413050289"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/35426838255"
       }
     },
     {
