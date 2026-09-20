@@ -28,14 +28,14 @@
       "freq": [
         0,
         0,
-        6,
+        5,
         6,
         6,
         7,
         6,
         8,
         8,
-        1
+        2
       ],
       "lastDeploy": "5h ago",
       "lead": "0m",
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "5874203"
+        "prod": "dd8255a"
       },
       "envState": {
         "dev": "none",
@@ -72,7 +72,7 @@
       "stageLinks": {
         "build": "https://github.com/letrud/lights-out/actions/runs/34778828048",
         "test": "https://github.com/letrud/lights-out/actions/runs/34778828048",
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/35481128669"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/35494183891"
       }
     },
     {
