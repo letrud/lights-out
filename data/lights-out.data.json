@@ -16,26 +16,26 @@
         "github-pages": "prod"
       },
       "stages": {
-        "build": "ok",
-        "test": "ok",
+        "build": "idle",
+        "test": "idle",
         "scan": "idle",
         "sign": "idle",
         "release": "idle",
         "deploy": "ok"
       },
-      "auto": 50,
+      "auto": 17,
       "deploys": 49,
       "freq": [
         0,
         0,
-        4,
+        3,
         6,
         6,
         7,
         6,
         8,
         8,
-        4
+        5
       ],
       "lastDeploy": "2h ago",
       "lead": "0m",
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "ff79364"
+        "prod": "9e2e6c0"
       },
       "envState": {
         "dev": "none",
@@ -70,9 +70,7 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "build": "https://github.com/letrud/lights-out/actions/runs/34778828048",
-        "test": "https://github.com/letrud/lights-out/actions/runs/34778828048",
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/35517745629"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/35526787212"
       }
     },
     {
