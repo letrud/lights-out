@@ -26,7 +26,6 @@
       "auto": 17,
       "deploys": 35,
       "freq": [
-        5,
         6,
         4,
         5,
@@ -35,9 +34,10 @@
         5,
         6,
         6,
-        3
+        4,
+        0
       ],
-      "lastDeploy": "5h ago",
+      "lastDeploy": "3h ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "fde3a26"
+        "prod": "ca28523"
       },
       "envState": {
         "dev": "none",
@@ -70,7 +70,7 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/37348631589"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/37387507210"
       }
     },
     {
