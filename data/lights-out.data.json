@@ -24,7 +24,7 @@
         "deploy": "ok"
       },
       "auto": 17,
-      "deploys": 33,
+      "deploys": 32,
       "freq": [
         5,
         5,
@@ -35,9 +35,9 @@
         5,
         4,
         5,
-        3
+        4
       ],
-      "lastDeploy": "4h ago",
+      "lastDeploy": "3h ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "42586a1"
+        "prod": "bce104b"
       },
       "envState": {
         "dev": "none",
@@ -70,7 +70,7 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/38062229454"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/38079015074"
       }
     },
     {
