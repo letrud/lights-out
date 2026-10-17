@@ -24,9 +24,9 @@
         "deploy": "ok"
       },
       "auto": 17,
-      "deploys": 38,
+      "deploys": 39,
       "freq": [
-        4,
+        3,
         5,
         5,
         5,
@@ -35,9 +35,9 @@
         6,
         6,
         7,
-        4
+        5
       ],
-      "lastDeploy": "3h ago",
+      "lastDeploy": "2h ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "ca9d948"
+        "prod": "bcdc502"
       },
       "envState": {
         "dev": "none",
@@ -70,7 +70,7 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/39035448949"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/39049142386"
       }
     },
     {
