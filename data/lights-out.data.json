@@ -28,14 +28,14 @@
       "freq": [
         0,
         0,
-        8,
+        7,
         8,
         5,
         6,
         6,
         6,
         6,
-        5
+        6
       ],
       "lastDeploy": "2h ago",
       "lead": "0m",
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "bda9737"
+        "prod": "f6ef138"
       },
       "envState": {
         "dev": "none",
@@ -70,7 +70,7 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/40112868004"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/40123382712"
       }
     },
     {
