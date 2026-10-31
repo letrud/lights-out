@@ -24,10 +24,9 @@
         "deploy": "ok"
       },
       "auto": 17,
-      "deploys": 39,
+      "deploys": 38,
       "freq": [
-        0,
-        6,
+        5,
         6,
         8,
         7,
@@ -35,9 +34,10 @@
         5,
         5,
         4,
-        4
+        5,
+        0
       ],
-      "lastDeploy": "4h ago",
+      "lastDeploy": "3h ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "5ad7010"
+        "prod": "dcd576e"
       },
       "envState": {
         "dev": "none",
@@ -70,7 +70,7 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/41096391482"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/41131240625"
       }
     },
     {
