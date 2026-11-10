@@ -26,7 +26,6 @@
       "auto": 17,
       "deploys": 28,
       "freq": [
-        6,
         5,
         3,
         4,
@@ -35,9 +34,10 @@
         4,
         5,
         5,
-        2
+        3,
+        0
       ],
-      "lastDeploy": "10h ago",
+      "lastDeploy": "6h ago",
       "lead": "0m",
       "leadM": 0,
       "cfr": 0.0,
@@ -46,7 +46,7 @@
         "dev": null,
         "test": null,
         "stage": null,
-        "prod": "15eda62"
+        "prod": "b6c6549"
       },
       "envState": {
         "dev": "none",
@@ -70,7 +70,7 @@
       "outdated": null,
       "runbook": false,
       "stageLinks": {
-        "deploy": "https://github.com/letrud/lights-out/actions/runs/42597109567"
+        "deploy": "https://github.com/letrud/lights-out/actions/runs/42691725463"
       }
     },
     {
